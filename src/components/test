@@ -1,0 +1,428 @@
+const data1 =
+{
+    "photos": []
+}
+
+
+
+const data2 =
+{
+    "photos": [
+        {
+            "id": 1200587,
+            "sol": 3977,
+            "camera": {
+                "id": 26,
+                "name": "NAVCAM",
+                "rover_id": 5,
+                "full_name": "Navigation Camera"
+            },
+            "img_src": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03977/opgs/edr/ncam/NLB_750558299EDR_F1050418NCAM00322M_.JPG",
+            "earth_date": "2023-10-14",
+            "rover": {
+                "id": 5,
+                "name": "Curiosity",
+                "landing_date": "2012-08-06",
+                "launch_date": "2011-11-26",
+                "status": "active",
+                "max_sol": 3977,
+                "max_date": "2023-10-14",
+                "total_photos": 683862,
+                "cameras": [
+                    {
+                        "name": "FHAZ",
+                        "full_name": "Front Hazard Avoidance Camera"
+                    },
+                    {
+                        "name": "NAVCAM",
+                        "full_name": "Navigation Camera"
+                    },
+                    {
+                        "name": "MAST",
+                        "full_name": "Mast Camera"
+                    },
+                    {
+                        "name": "CHEMCAM",
+                        "full_name": "Chemistry and Camera Complex"
+                    },
+                    {
+                        "name": "MAHLI",
+                        "full_name": "Mars Hand Lens Imager"
+                    },
+                    {
+                        "name": "MARDI",
+                        "full_name": "Mars Descent Imager"
+                    },
+                    {
+                        "name": "RHAZ",
+                        "full_name": "Rear Hazard Avoidance Camera"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 1200588,
+            "sol": 3977,
+            "camera": {
+                "id": 26,
+                "name": "NAVCAM",
+                "rover_id": 5,
+                "full_name": "Navigation Camera"
+            },
+            "img_src": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03977/opgs/edr/ncam/NLB_750558051EDR_F1050418NCAM00323M_.JPG",
+            "earth_date": "2023-10-14",
+            "rover": {
+                "id": 5,
+                "name": "Curiosity",
+                "landing_date": "2012-08-06",
+                "launch_date": "2011-11-26",
+                "status": "active",
+                "max_sol": 3977,
+                "max_date": "2023-10-14",
+                "total_photos": 683862,
+                "cameras": [
+                    {
+                        "name": "FHAZ",
+                        "full_name": "Front Hazard Avoidance Camera"
+                    },
+                    {
+                        "name": "NAVCAM",
+                        "full_name": "Navigation Camera"
+                    },
+                    {
+                        "name": "MAST",
+                        "full_name": "Mast Camera"
+                    },
+                    {
+                        "name": "CHEMCAM",
+                        "full_name": "Chemistry and Camera Complex"
+                    },
+                    {
+                        "name": "MAHLI",
+                        "full_name": "Mars Hand Lens Imager"
+                    },
+                    {
+                        "name": "MARDI",
+                        "full_name": "Mars Descent Imager"
+                    },
+                    {
+                        "name": "RHAZ",
+                        "full_name": "Rear Hazard Avoidance Camera"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 1200589,
+            "sol": 3977,
+            "camera": {
+                "id": 26,
+                "name": "NAVCAM",
+                "rover_id": 5,
+                "full_name": "Navigation Camera"
+            },
+            "img_src": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03977/opgs/edr/ncam/NLB_750545512EDR_F1050418NCAM00322M_.JPG",
+            "earth_date": "2023-10-14",
+            "rover": {
+                "id": 5,
+                "name": "Curiosity",
+                "landing_date": "2012-08-06",
+                "launch_date": "2011-11-26",
+                "status": "active",
+                "max_sol": 3977,
+                "max_date": "2023-10-14",
+                "total_photos": 683862,
+                "cameras": [
+                    {
+                        "name": "FHAZ",
+                        "full_name": "Front Hazard Avoidance Camera"
+                    },
+                    {
+                        "name": "NAVCAM",
+                        "full_name": "Navigation Camera"
+                    },
+                    {
+                        "name": "MAST",
+                        "full_name": "Mast Camera"
+                    },
+                    {
+                        "name": "CHEMCAM",
+                        "full_name": "Chemistry and Camera Complex"
+                    },
+                    {
+                        "name": "MAHLI",
+                        "full_name": "Mars Hand Lens Imager"
+                    },
+                    {
+                        "name": "MARDI",
+                        "full_name": "Mars Descent Imager"
+                    },
+                    {
+                        "name": "RHAZ",
+                        "full_name": "Rear Hazard Avoidance Camera"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 1200590,
+            "sol": 3977,
+            "camera": {
+                "id": 26,
+                "name": "NAVCAM",
+                "rover_id": 5,
+                "full_name": "Navigation Camera"
+            },
+            "img_src": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03977/opgs/edr/ncam/NLB_750545262EDR_F1050418NCAM00323M_.JPG",
+            "earth_date": "2023-10-14",
+            "rover": {
+                "id": 5,
+                "name": "Curiosity",
+                "landing_date": "2012-08-06",
+                "launch_date": "2011-11-26",
+                "status": "active",
+                "max_sol": 3977,
+                "max_date": "2023-10-14",
+                "total_photos": 683862,
+                "cameras": [
+                    {
+                        "name": "FHAZ",
+                        "full_name": "Front Hazard Avoidance Camera"
+                    },
+                    {
+                        "name": "NAVCAM",
+                        "full_name": "Navigation Camera"
+                    },
+                    {
+                        "name": "MAST",
+                        "full_name": "Mast Camera"
+                    },
+                    {
+                        "name": "CHEMCAM",
+                        "full_name": "Chemistry and Camera Complex"
+                    },
+                    {
+                        "name": "MAHLI",
+                        "full_name": "Mars Hand Lens Imager"
+                    },
+                    {
+                        "name": "MARDI",
+                        "full_name": "Mars Descent Imager"
+                    },
+                    {
+                        "name": "RHAZ",
+                        "full_name": "Rear Hazard Avoidance Camera"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 1200591,
+            "sol": 3977,
+            "camera": {
+                "id": 26,
+                "name": "NAVCAM",
+                "rover_id": 5,
+                "full_name": "Navigation Camera"
+            },
+            "img_src": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03977/opgs/edr/ncam/NRB_750558299EDR_F1050418NCAM00322M_.JPG",
+            "earth_date": "2023-10-14",
+            "rover": {
+                "id": 5,
+                "name": "Curiosity",
+                "landing_date": "2012-08-06",
+                "launch_date": "2011-11-26",
+                "status": "active",
+                "max_sol": 3977,
+                "max_date": "2023-10-14",
+                "total_photos": 683862,
+                "cameras": [
+                    {
+                        "name": "FHAZ",
+                        "full_name": "Front Hazard Avoidance Camera"
+                    },
+                    {
+                        "name": "NAVCAM",
+                        "full_name": "Navigation Camera"
+                    },
+                    {
+                        "name": "MAST",
+                        "full_name": "Mast Camera"
+                    },
+                    {
+                        "name": "CHEMCAM",
+                        "full_name": "Chemistry and Camera Complex"
+                    },
+                    {
+                        "name": "MAHLI",
+                        "full_name": "Mars Hand Lens Imager"
+                    },
+                    {
+                        "name": "MARDI",
+                        "full_name": "Mars Descent Imager"
+                    },
+                    {
+                        "name": "RHAZ",
+                        "full_name": "Rear Hazard Avoidance Camera"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 1200592,
+            "sol": 3977,
+            "camera": {
+                "id": 26,
+                "name": "NAVCAM",
+                "rover_id": 5,
+                "full_name": "Navigation Camera"
+            },
+            "img_src": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03977/opgs/edr/ncam/NRB_750558051EDR_F1050418NCAM00323M_.JPG",
+            "earth_date": "2023-10-14",
+            "rover": {
+                "id": 5,
+                "name": "Curiosity",
+                "landing_date": "2012-08-06",
+                "launch_date": "2011-11-26",
+                "status": "active",
+                "max_sol": 3977,
+                "max_date": "2023-10-14",
+                "total_photos": 683862,
+                "cameras": [
+                    {
+                        "name": "FHAZ",
+                        "full_name": "Front Hazard Avoidance Camera"
+                    },
+                    {
+                        "name": "NAVCAM",
+                        "full_name": "Navigation Camera"
+                    },
+                    {
+                        "name": "MAST",
+                        "full_name": "Mast Camera"
+                    },
+                    {
+                        "name": "CHEMCAM",
+                        "full_name": "Chemistry and Camera Complex"
+                    },
+                    {
+                        "name": "MAHLI",
+                        "full_name": "Mars Hand Lens Imager"
+                    },
+                    {
+                        "name": "MARDI",
+                        "full_name": "Mars Descent Imager"
+                    },
+                    {
+                        "name": "RHAZ",
+                        "full_name": "Rear Hazard Avoidance Camera"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 1200593,
+            "sol": 3977,
+            "camera": {
+                "id": 26,
+                "name": "NAVCAM",
+                "rover_id": 5,
+                "full_name": "Navigation Camera"
+            },
+            "img_src": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03977/opgs/edr/ncam/NRB_750545512EDR_F1050418NCAM00322M_.JPG",
+            "earth_date": "2023-10-14",
+            "rover": {
+                "id": 5,
+                "name": "Curiosity",
+                "landing_date": "2012-08-06",
+                "launch_date": "2011-11-26",
+                "status": "active",
+                "max_sol": 3977,
+                "max_date": "2023-10-14",
+                "total_photos": 683862,
+                "cameras": [
+                    {
+                        "name": "FHAZ",
+                        "full_name": "Front Hazard Avoidance Camera"
+                    },
+                    {
+                        "name": "NAVCAM",
+                        "full_name": "Navigation Camera"
+                    },
+                    {
+                        "name": "MAST",
+                        "full_name": "Mast Camera"
+                    },
+                    {
+                        "name": "CHEMCAM",
+                        "full_name": "Chemistry and Camera Complex"
+                    },
+                    {
+                        "name": "MAHLI",
+                        "full_name": "Mars Hand Lens Imager"
+                    },
+                    {
+                        "name": "MARDI",
+                        "full_name": "Mars Descent Imager"
+                    },
+                    {
+                        "name": "RHAZ",
+                        "full_name": "Rear Hazard Avoidance Camera"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 1200594,
+            "sol": 3977,
+            "camera": {
+                "id": 26,
+                "name": "NAVCAM",
+                "rover_id": 5,
+                "full_name": "Navigation Camera"
+            },
+            "img_src": "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03977/opgs/edr/ncam/NRB_750545262EDR_F1050418NCAM00323M_.JPG",
+            "earth_date": "2023-10-14",
+            "rover": {
+                "id": 5,
+                "name": "Curiosity",
+                "landing_date": "2012-08-06",
+                "launch_date": "2011-11-26",
+                "status": "active",
+                "max_sol": 3977,
+                "max_date": "2023-10-14",
+                "total_photos": 683862,
+                "cameras": [
+                    {
+                        "name": "FHAZ",
+                        "full_name": "Front Hazard Avoidance Camera"
+                    },
+                    {
+                        "name": "NAVCAM",
+                        "full_name": "Navigation Camera"
+                    },
+                    {
+                        "name": "MAST",
+                        "full_name": "Mast Camera"
+                    },
+                    {
+                        "name": "CHEMCAM",
+                        "full_name": "Chemistry and Camera Complex"
+                    },
+                    {
+                        "name": "MAHLI",
+                        "full_name": "Mars Hand Lens Imager"
+                    },
+                    {
+                        "name": "MARDI",
+                        "full_name": "Mars Descent Imager"
+                    },
+                    {
+                        "name": "RHAZ",
+                        "full_name": "Rear Hazard Avoidance Camera"
+                    }
+                ]
+            }
+        }
+    ]
+}
