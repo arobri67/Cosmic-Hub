@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 
-const Header = ({ title }) => {
+const Header = ({ api }) => {
   return (
     <header>
       <div className="logo-container">
@@ -10,8 +10,7 @@ const Header = ({ title }) => {
           COSMIC <span>HUB</span>
         </h1>
       </div>
-
-      <h2>{title}</h2>
+      <h2>{api}</h2>
       <hr />
     </header>
   );

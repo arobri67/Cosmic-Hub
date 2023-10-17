@@ -12,8 +12,3 @@ h1 {
 h1 span {
   color: var(--third-color);
 }
-h2 {
-  font-size: 3.2rem;
-  font-weight: 300;
-  padding: 1em 0;
-}
