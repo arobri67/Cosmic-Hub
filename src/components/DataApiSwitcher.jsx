@@ -1,6 +1,6 @@
-import ApodRender from "./components/ApodRender";
-import MrpRender from "./components/MrpRender";
-import Error from "./components/Error";
+import ApodRender from "./ApodRender";
+import MrpRender from "./MrpRender";
+import Error from "./Error";
 
 const DataApiSwitcher = ({ dataToRender, selectedAPI }) => {
   let data = dataToRender;

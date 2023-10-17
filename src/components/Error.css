@@ -1,0 +1,26 @@
+.error-container {
+  display: flex;
+  align-items: center;
+}
+.error-img-container {
+  flex: 4;
+}
+
+.error-msg-container {
+  flex: 6;
+}
+
+.error-img-container img {
+  width: 100%;
+}
+.error-container h2 {
+  font-size: 3em;
+  padding-bottom: 1em;
+}
+.error-container p {
+  font-size: 2em;
+  padding-top: 1em;
+}
+.error-container h2 span {
+  color: var(--third-color);
+}

@@ -1,14 +1,30 @@
 header {
-  padding: 4.5em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em 0;
+  border-bottom: 1px solid var(--secondary-color);
 }
 .logo-container {
   display: flex;
   gap: 0.5em;
   align-items: center;
 }
-h1 {
+header h1 {
   font-size: 4rem;
+  font-weight: bold;
 }
-h1 span {
+header h2 {
+  font-size: 3.2rem;
+  font-weight: 300;
+  padding: 0.5em 0 0 0;
+}
+header h1 span {
   color: var(--third-color);
+}
+.circle {
+  background-color: aqua;
+  border-radius: 100px;
+  width: 10em;
+  height: 10em;
 }

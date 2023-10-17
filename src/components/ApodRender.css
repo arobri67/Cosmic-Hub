@@ -1,0 +1,25 @@
+.apod-container {
+  display: flex;
+  gap: 8em;
+  padding: 3em 0;
+  align-items: flex-start;
+}
+
+.img-container {
+  flex: 5;
+}
+.img-container > img {
+  width: 100%;
+}
+
+.description-container {
+  flex: 5;
+}
+.description-container h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.description-container p {
+  font-size: 1.6em;
+  padding: 0.5em 0;
+}

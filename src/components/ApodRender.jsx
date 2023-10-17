@@ -1,13 +1,24 @@
+import "./ApodRender.css";
+
 const ApodRender = ({ ApodData }) => {
   return (
-    <section>
-      <h3>{ApodData.title}</h3>
-      <p>This image corresponds to the date: {ApodData.date}</p>
+    <section className="apod-container">
       <div className="img-container">
         <img src={ApodData.url} alt={ApodData.title} />
       </div>
-      <p>Description: {ApodData.explanation || "Not available"}</p>
-      <p>Author: {ApodData.copyright || "Not available"} </p>
+      <div className="description-container">
+        <h3>{ApodData.title}</h3>
+        <p>
+          <strong>Date:</strong> {ApodData.date}
+        </p>
+        <p>
+          <strong>Description:</strong>{" "}
+          {ApodData.explanation || "Not available"}
+        </p>
+        <p>
+          <strong>Author:</strong> {ApodData.copyright || "Not available"}{" "}
+        </p>
+      </div>
     </section>
   );
 };

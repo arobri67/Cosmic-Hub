@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import DataApiSwitcher from "../DataApiSwitcher";
+import DataApiSwitcher from "./DataApiSwitcher";
 
 const NASA_API_KEY = "vHkj5pXOZGsoBOuuwZB1YONhbYyUwI4OvBpG3RUj";
 const API_BASE_URL = "https://api.nasa.gov/";
