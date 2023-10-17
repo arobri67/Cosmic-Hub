@@ -1,0 +1,19 @@
+header {
+  padding: 4.5em 0;
+}
+.logo-container {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+h1 {
+  font-size: 4rem;
+}
+h1 span {
+  color: var(--third-color);
+}
+h2 {
+  font-size: 3.2rem;
+  font-weight: 300;
+  padding: 1em 0;
+}

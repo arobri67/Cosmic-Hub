@@ -20,9 +20,12 @@ function App() {
   );
   //define the cam by the user for MRP API
   const [selectedCAM, setSelectedCAM] = useState("navcam");
+
   //define data to be collected
   const [data, setData] = useState([]);
   console.log(data);
+
+  //axios get data from API, with conditional parameters to follow what the user has selected in the API select dropdown menu
   const getData = async () => {
     let currentApiUrl;
     if (selectedAPI === "Astronomy Picture Of The Day") {
@@ -52,59 +55,58 @@ function App() {
   return (
     <>
       <Header title={selectedAPI} />
-      <input type="date" onChange={handleDate} max={todayDate} />
+      <main>
+        <input type="date" onChange={handleDate} max={todayDate} />
 
-      <select name="apiSelect" onChange={handleApi}>
-        <option value="Astronomy Picture Of The Day">
-          Astronomy Picture Of The Day
-        </option>
-        <option value="Mars Rover Photos">Mars Rover Photos</option>
-      </select>
+        <select name="apiSelect" onChange={handleApi}>
+          <option value="Astronomy Picture Of The Day">
+            Astronomy Picture Of The Day
+          </option>
+          <option value="Mars Rover Photos">Mars Rover Photos</option>
+        </select>
 
-      {selectedAPI === "Astronomy Picture Of The Day" ? (
-        <ApodFigure
-          image={data.url}
-          date={data.date}
-          description={data.explanation}
-          about={data.copyright}
-          title={data.title}
-        />
-      ) : selectedAPI === "Mars Rover Photos" &&
-        data.photos &&
-        data.photos.length > 0 ? (
-        <>
-          <select name="camSelect" onChange={handleCAM}>
-            <option value="fhaz">Front Hazard Avoidance Camera</option>
-            <option value="rhaz">Rear Hazard Avoidance Camera</option>
-            <option value="mast">Mast Camera</option>
-            <option value="chemcam">Chemistry and Camera Complex</option>
-            <option value="mahli">Mars Hand Lens Imager</option>
-            <option value="mardi">Mars Descent Imager</option>
-            <option value="navcam">Navigation Camera</option>
-          </select>
-          <MrpFigure
-            image={data.photos[0].img_src}
-            date={data.photos[0].earth_date}
-            id={data.photos[0].id}
-            sol={data.photos[0].sol}
-            camera={data.photos[0].camera.full_name}
+        {selectedAPI === "Astronomy Picture Of The Day" ? (
+          <ApodFigure
+            image={data.url}
+            date={data.date}
+            description={data.explanation}
+            about={data.copyright}
+            title={data.title}
           />
-        </>
-      ) : (
-        <>
-          {" "}
-          <select name="camSelect" onChange={handleCAM}>
-            <option value="fhaz">Front Hazard Avoidance Camera</option>
-            <option value="rhaz">Rear Hazard Avoidance Camera</option>
-            <option value="mast">Mast Camera</option>
-            <option value="chemcam">Chemistry and Camera Complex</option>
-            <option value="mahli">Mars Hand Lens Imager</option>
-            <option value="mardi">Mars Descent Imager</option>
-            <option value="navcam">Navigation Camera</option>
-          </select>
-          <Error />
-        </>
-      )}
+        ) : selectedAPI === "Mars Rover Photos" &&
+          data.photos &&
+          data.photos.length > 0 ? (
+          <>
+            <select name="camSelect" onChange={handleCAM}>
+              <option value="navcam">Navigation Camera</option>
+              <option value="fhaz">Front Hazard Avoidance Camera</option>
+              <option value="rhaz">Rear Hazard Avoidance Camera</option>
+              <option value="mast">Mast Camera</option>
+              <option value="chemcam">Chemistry and Camera Complex</option>
+              <option value="mahli">Mars Hand Lens Imager</option>
+            </select>
+            <MrpFigure
+              image={data.photos[0].img_src}
+              date={data.photos[0].earth_date}
+              id={data.photos[0].id}
+              sol={data.photos[0].sol}
+              camera={data.photos[0].camera.full_name}
+            />
+          </>
+        ) : (
+          <>
+            <select name="camSelect" onChange={handleCAM}>
+              <option value="navcam">Navigation Camera</option>
+              <option value="fhaz">Front Hazard Avoidance Camera</option>
+              <option value="rhaz">Rear Hazard Avoidance Camera</option>
+              <option value="mast">Mast Camera</option>
+              <option value="chemcam">Chemistry and Camera Complex</option>
+              <option value="mahli">Mars Hand Lens Imager</option>
+            </select>
+            <Error />
+          </>
+        )}
+      </main>
     </>
   );
 }
