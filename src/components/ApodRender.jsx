@@ -1,22 +1,16 @@
 import "./ApodRender.css";
 
-const ApodRender = ({ ApodData }) => {
+const ApodRender = ({ apodData }) => {
   return (
     <section className="apod-container">
       <div className="img-apod-container">
-        <img src={ApodData.url} alt={ApodData.title} />
+        <img src={apodData.url} alt={apodData.title} />
       </div>
       <div className="description-apod-container">
-        <h3>{ApodData.title}</h3>
-        <p>
-          <strong>Date:</strong> {ApodData.date}
-        </p>
-        <p>
-          <strong>Description:</strong>{" "}
-          {ApodData.explanation || "Not available"}
-        </p>
-        <p>
-          <strong>Author:</strong> {ApodData.copyright || "Not available"}{" "}
+        <h3>{apodData.title}</h3>
+        <p>{apodData.explanation || "Not description available"}</p>
+        <p className="credits">
+          Photo from {apodData.date}, by {apodData.copyright || "unknown"}
         </p>
       </div>
     </section>

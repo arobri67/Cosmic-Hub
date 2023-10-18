@@ -3,6 +3,7 @@
   gap: 8em;
   padding: 3em 0;
   align-items: flex-start;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .img-apod-container {
@@ -17,9 +18,20 @@
 }
 .description-apod-container h3 {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 700;
+  color: var(--third-color);
+  line-height: 100%;
+  text-transform: uppercase;
 }
 .description-apod-container p {
-  font-size: 1.6em;
+  font-size: 2em;
+  font-weight: 300;
   padding: 0.5em 0;
+  line-height: 120%;
+  letter-spacing: 0.1px;
+}
+.credits {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--fourth-color);
 }

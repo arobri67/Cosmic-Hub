@@ -21,6 +21,9 @@
   font-size: 2em;
   padding-top: 1em;
 }
+.error-container p span {
+  color: var(--third-color);
+}
 .error-container h2 span {
   color: var(--third-color);
 }

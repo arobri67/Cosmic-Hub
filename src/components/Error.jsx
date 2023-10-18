@@ -11,7 +11,10 @@ const Error = () => {
           <h2>
             <span>Whoops!</span> Something's not quite right...
           </h2>
-          <p>Please choose another date, library</p>
+          <p>
+            No photo available. Please select another <span>date</span> or{" "}
+            <span>library</span>
+          </p>
         </div>
       </section>
     </main>

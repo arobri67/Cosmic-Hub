@@ -1,6 +1,7 @@
 import ApodRender from "./ApodRender";
 import MrpRender from "./MrpRender";
 import Error from "./Error";
+import Loading from "./Loading";
 import { useState, useEffect } from "react";
 
 const DataApiSwitcher = ({ dataToRender, selectedAPI, selectedDate }) => {
@@ -16,15 +17,14 @@ const DataApiSwitcher = ({ dataToRender, selectedAPI, selectedDate }) => {
   return (
     <>
       {dataLoaded ? (
-        // You can show a loading indicator or message while waiting for data to load
-        <div>Loading data...</div>
+        <Loading />
       ) : selectedAPI === "Astronomy Picture Of The Day" ? (
-        <ApodRender ApodData={dataToRender} />
+        <ApodRender apodData={dataToRender} />
       ) : selectedAPI === "Mars Rover Photos" &&
         dataToRender.photos &&
         dataToRender.photos.length > 0 ? (
         <>
-          <MrpRender MrpData={dataToRender} />
+          <MrpRender mrpData={dataToRender} />
         </>
       ) : (
         <Error />
