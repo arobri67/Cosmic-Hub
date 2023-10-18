@@ -9,7 +9,7 @@ const App = () => {
   const [selectedAPI, setSelectedAPI] = useState(
     "Astronomy Picture Of The Day"
   );
-  //   const [selectedCAM, setSelectedCAM] = useState("navcam");
+  const [selectedCam, setSelectedCam] = useState("navcam");
 
   const handleDate = (e) => {
     setSelectedDate(e.target.value.toLocaleString());
@@ -17,9 +17,9 @@ const App = () => {
   const handleApi = (e) => {
     setSelectedAPI(e.target.value);
   };
-  //   const handleCAM = (e) => {
-  //     setSelectedCAM(e.target.value);
-  //   };
+  const handleCam = (e) => {
+    setSelectedCam(e.target.value);
+  };
   return (
     <>
       <Header api={selectedAPI} />
@@ -38,10 +38,20 @@ const App = () => {
               <option value="Mars Rover Photos">Mars Rover Photos</option>
             </select>
           </div>
+          {selectedAPI === "Mars Rover Photos" ? (
+            <div className="cam-selector">
+              <span>Select a camera:</span>
+              <select name="camSelect" onChange={handleCam}>
+                <option value="navcam">Navigation Camera (NAV)</option>
+                <option value="mast">Mast Camera (MAST)</option>
+              </select>
+            </div>
+          ) : null}
         </section>
         <FetchdataFromApi
           selectedDate={selectedDate}
           selectedAPI={selectedAPI}
+          selectedCam={selectedCam}
         />
       </main>
     </>

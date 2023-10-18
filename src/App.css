@@ -26,11 +26,13 @@ input[type="date"] {
   outline: none;
   cursor: pointer;
 }
-.api-selector {
+.api-selector,
+.cam-selector {
   display: flex;
   flex-direction: column;
 }
-.api-selector select {
+.api-selector select,
+.cam-selector select {
   background-color: var(--secondary-color);
   height: 30px;
   font-size: 1.5em;
