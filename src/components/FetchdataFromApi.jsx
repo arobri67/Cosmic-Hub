@@ -21,13 +21,18 @@ const FetchdataFromApi = ({ selectedDate, selectedAPI }) => {
       setData(data);
     }
   };
+
   useEffect(() => {
     getData();
   }, [selectedDate, selectedAPI]);
-
+  console.log(data);
   return (
     <>
-      <DataApiSwitcher dataToRender={data} selectedAPI={selectedAPI} />
+      <DataApiSwitcher
+        dataToRender={data}
+        selectedAPI={selectedAPI}
+        selectedDate={selectedDate}
+      />
     </>
   );
 };

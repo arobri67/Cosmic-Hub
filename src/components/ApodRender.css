@@ -5,21 +5,21 @@
   align-items: flex-start;
 }
 
-.img-container {
+.img-apod-container {
   flex: 5;
 }
-.img-container > img {
+.img-apod-container > img {
   width: 100%;
 }
 
-.description-container {
+.description-apod-container {
   flex: 5;
 }
-.description-container h3 {
+.description-apod-container h3 {
   font-size: 2.5rem;
   font-weight: bold;
 }
-.description-container p {
+.description-apod-container p {
   font-size: 1.6em;
   padding: 0.5em 0;
 }

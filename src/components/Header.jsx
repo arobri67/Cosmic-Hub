@@ -1,18 +1,33 @@
 import "./Header.css";
+import { useState, useEffect } from "react";
+import mrpBackground from "../assets/mrp.png";
+import apodBackground from "../assets/apod.png";
 
 const Header = ({ api }) => {
-  let apiName = api;
-  console.log(api);
-  let apiAcronym = "";
-  if (apiName === "Astronomy Picture Of The Day") {
-    apiAcronym = "APOD";
-  } else if (apiName === "Mars Rover Photos") {
-    apiAcronym = "MRP";
-  }
-  console.log(`current acronym ${apiAcronym}`);
+  // update apiAcronym only when api is changing
+  const [apiAcronym, setApiAcronym] = useState("apod");
+  useEffect(() => {
+    if (api === "Astronomy Picture Of The Day") {
+      setApiAcronym("APOD");
+    } else if (api === "Mars Rover Photos") {
+      setApiAcronym("MRP");
+    }
+  }, [api]);
+
+  const getBackgroundImage = (api) => {
+    if (api === "Astronomy Picture Of The Day") {
+      return `url(${apodBackground})`;
+    } else if (api === "Mars Rover Photos") {
+      return `url(${mrpBackground})`;
+    }
+  };
+  const circleStyle = {
+    backgroundImage: getBackgroundImage(api),
+    backgroundSize: "cover",
+  };
   return (
     <header>
-      <div className="left">
+      <div className="header-left">
         <div className="logo-container">
           <img src="/galaxy.svg" alt="Galaxy Logo" />
           <h1>
@@ -21,8 +36,10 @@ const Header = ({ api }) => {
         </div>
         <h2>{api}</h2>
       </div>
-      <div className="righ">
-        <div className="circle">{apiAcronym}</div>
+      <div className="header-right">
+        <div className="circle" style={circleStyle}>
+          <span className="apiAcro">{apiAcronym}</span>
+        </div>
       </div>
     </header>
   );

@@ -23,8 +23,14 @@ header h1 span {
   color: var(--third-color);
 }
 .circle {
-  background-color: aqua;
   border-radius: 100px;
   width: 10em;
   height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.apiAcro {
+  font-size: 2.4rem;
+  font-weight: bold;
 }
