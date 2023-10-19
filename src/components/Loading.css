@@ -1,5 +1,6 @@
 .loading-container {
   padding: 5em 0;
+  border-bottom: 1px solid var(--secondary-color);
 }
 .loading-container p {
   font-size: 3em;

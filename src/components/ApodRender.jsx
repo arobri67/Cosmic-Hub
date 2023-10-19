@@ -1,6 +1,6 @@
 import "./ApodRender.css";
 
-const ApodRender = ({ apodData }) => {
+const ApodRender = ({ apodData, formatedDate }) => {
   return (
     <section className="apod-container">
       <div className="img-apod-container">
@@ -10,7 +10,7 @@ const ApodRender = ({ apodData }) => {
         <h3>{apodData.title}</h3>
         <p>{apodData.explanation || "Not description available"}</p>
         <p className="credits">
-          Photo from {apodData.date}, by {apodData.copyright || "unknown"}
+          Photo from {formatedDate}, by {apodData.copyright || "unknown"}
         </p>
       </div>
     </section>

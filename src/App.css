@@ -2,12 +2,29 @@
   max-width: 1280px;
   margin: 0 auto;
 }
-.selector-container {
+
+.selector-filter-container {
   display: flex;
-  gap: 6em;
+  flex-direction: column;
   padding: 3em 0;
   border-bottom: 1px solid var(--secondary-color);
 }
+.selector-container {
+  display: flex;
+  gap: 6em;
+}
+.current-filter {
+  padding-top: 1em;
+  font-size: 1.8rem;
+}
+.current-filter ul {
+  display: flex;
+  list-style: none;
+  font-size: 1.6rem;
+  gap: 2em;
+  padding-top: 0.2em;
+}
+
 .selector-container span {
   font-size: 1.8em;
   padding-right: 0.5em;
@@ -27,12 +44,14 @@ input[type="date"] {
   cursor: pointer;
 }
 .api-selector,
-.cam-selector {
+.cam-selector,
+.rover-selector {
   display: flex;
   flex-direction: column;
 }
 .api-selector select,
-.cam-selector select {
+.cam-selector select,
+.rover-selector select {
   background-color: var(--secondary-color);
   height: 30px;
   font-size: 1.5em;
@@ -40,4 +59,11 @@ input[type="date"] {
   border: none;
   outline: none;
   cursor: pointer;
+}
+.about {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 2em 0;
+  font-size: 1.6rem;
 }

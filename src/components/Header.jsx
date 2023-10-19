@@ -26,7 +26,7 @@ const Header = ({ api }) => {
     backgroundSize: "cover",
   };
   return (
-    <header>
+    <>
       <div className="header-left">
         <div className="logo-container">
           <img src="/galaxy.svg" alt="Galaxy Logo" />
@@ -41,7 +41,7 @@ const Header = ({ api }) => {
           <span className="apiAcro">{apiAcronym}</span>
         </div>
       </div>
-    </header>
+    </>
   );
 };
 

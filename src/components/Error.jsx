@@ -12,8 +12,8 @@ const Error = () => {
             <span>Whoops!</span> Something's not quite right...
           </h2>
           <p>
-            No photo available. Please select another <span>date</span> or{" "}
-            <span>library</span>
+            No photo available. Please select another <span>date</span>,{" "}
+            <span>library</span>, <span>rover</span>, or <span>camera</span>
           </p>
         </div>
       </section>

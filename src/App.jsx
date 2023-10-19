@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
-import FetchdataFromApi from "./components/FetchdataFromApi";
 import Header from "./components/Header";
+import Filter from "./components/Filter";
 
 const App = () => {
   const todayDate = new Date(Date.now()).toISOString().slice(0, 10);
@@ -9,51 +9,56 @@ const App = () => {
   const [selectedAPI, setSelectedAPI] = useState(
     "Astronomy Picture Of The Day"
   );
-  const [selectedCam, setSelectedCam] = useState("navcam");
+  const [selectedRover, setSelectedRover] = useState("");
+  const [selectedCam, setSelectedCam] = useState("");
 
-  const handleDate = (e) => {
-    setSelectedDate(e.target.value.toLocaleString());
+  const date = new Date(selectedDate);
+
+  const handleDatePlusOne = () => {
+    const date = new Date(selectedDate);
+    date.setDate(date.getDate() + 1);
+    setSelectedDate(date.toISOString().slice(0, 10));
   };
-  const handleApi = (e) => {
-    setSelectedAPI(e.target.value);
+  const handleDateMinusOne = () => {
+    const date = new Date(selectedDate);
+    date.setDate(date.getDate() - 1);
+    setSelectedDate(date.toISOString().slice(0, 10));
   };
-  const handleCam = (e) => {
-    setSelectedCam(e.target.value);
-  };
+
   return (
     <>
-      <Header api={selectedAPI} />
+      <header>
+        <Header api={selectedAPI} />
+      </header>
       <main>
-        <section className="selector-container">
-          <div className="date-selector">
-            <span>Select a date:</span>
-            <input type="date" max={todayDate} onChange={handleDate} />
-          </div>
-          <div className="api-selector">
-            <span>Select a library:</span>
-            <select name="apiSelect" onChange={handleApi}>
-              <option value="Astronomy Picture Of The Day">
-                Astronomy Picture Of The Day
-              </option>
-              <option value="Mars Rover Photos">Mars Rover Photos</option>
-            </select>
-          </div>
-          {selectedAPI === "Mars Rover Photos" ? (
-            <div className="cam-selector">
-              <span>Select a camera:</span>
-              <select name="camSelect" onChange={handleCam}>
-                <option value="navcam">Navigation Camera (NAV)</option>
-                <option value="mast">Mast Camera (MAST)</option>
-              </select>
+        <>
+          <Filter
+            selectedDate={selectedDate}
+            setSelectedDate={setSelectedDate}
+            selectedAPI={selectedAPI}
+            setSelectedAPI={setSelectedAPI}
+            selectedRover={selectedRover}
+            setSelectedRover={setSelectedRover}
+            selectedCam={selectedCam}
+            setSelectedCam={setSelectedCam}
+            todayDate={todayDate}
+          />
+          <section>
+            <div>
+              <button onClick={() => handleDateMinusOne()}>Previous</button>
+              <button onClick={() => setSelectedDate(todayDate)}>Today</button>
+              <button onClick={() => handleDatePlusOne()}>Next</button>
             </div>
-          ) : null}
-        </section>
-        <FetchdataFromApi
-          selectedDate={selectedDate}
-          selectedAPI={selectedAPI}
-          selectedCam={selectedCam}
-        />
+          </section>
+        </>
       </main>
+      <footer>
+        <ul className="about">
+          <li>COSMIC HUB 1.0</li>
+          <li>Made by Arnaud</li>
+          <li>View it on GitHub</li>
+        </ul>
+      </footer>
     </>
   );
 };
