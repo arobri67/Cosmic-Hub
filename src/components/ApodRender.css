@@ -8,6 +8,7 @@
 
 .img-apod-container {
   flex: 5;
+  position: relative;
 }
 .img-apod-container > img {
   width: 100%;
@@ -15,6 +16,7 @@
 
 .description-apod-container {
   flex: 5;
+  list-style: none;
 }
 .description-apod-container h3 {
   font-size: 2.5rem;

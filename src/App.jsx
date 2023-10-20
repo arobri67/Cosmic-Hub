@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import Header from "./components/Header";
 import Filter from "./components/Filter";
+import NavDay from "./components/NavDay";
 
 const App = () => {
   const todayDate = new Date(Date.now()).toISOString().slice(0, 10);
@@ -12,18 +13,7 @@ const App = () => {
   const [selectedRover, setSelectedRover] = useState("");
   const [selectedCam, setSelectedCam] = useState("");
 
-  const date = new Date(selectedDate);
-
-  const handleDatePlusOne = () => {
-    const date = new Date(selectedDate);
-    date.setDate(date.getDate() + 1);
-    setSelectedDate(date.toISOString().slice(0, 10));
-  };
-  const handleDateMinusOne = () => {
-    const date = new Date(selectedDate);
-    date.setDate(date.getDate() - 1);
-    setSelectedDate(date.toISOString().slice(0, 10));
-  };
+  // const date = new Date(selectedDate);
 
   return (
     <>
@@ -31,26 +21,17 @@ const App = () => {
         <Header api={selectedAPI} />
       </header>
       <main>
-        <>
-          <Filter
-            selectedDate={selectedDate}
-            setSelectedDate={setSelectedDate}
-            selectedAPI={selectedAPI}
-            setSelectedAPI={setSelectedAPI}
-            selectedRover={selectedRover}
-            setSelectedRover={setSelectedRover}
-            selectedCam={selectedCam}
-            setSelectedCam={setSelectedCam}
-            todayDate={todayDate}
-          />
-          <section>
-            <div>
-              <button onClick={() => handleDateMinusOne()}>Previous</button>
-              <button onClick={() => setSelectedDate(todayDate)}>Today</button>
-              <button onClick={() => handleDatePlusOne()}>Next</button>
-            </div>
-          </section>
-        </>
+        <Filter
+          selectedDate={selectedDate}
+          setSelectedDate={setSelectedDate}
+          selectedAPI={selectedAPI}
+          setSelectedAPI={setSelectedAPI}
+          selectedRover={selectedRover}
+          setSelectedRover={setSelectedRover}
+          selectedCam={selectedCam}
+          setSelectedCam={setSelectedCam}
+          todayDate={todayDate}
+        />
       </main>
       <footer>
         <ul className="about">

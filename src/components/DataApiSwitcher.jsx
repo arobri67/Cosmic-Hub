@@ -3,7 +3,12 @@ import MrpRender from "./MrpRender";
 import Loading from "./Loading";
 import { useState, useEffect } from "react";
 
-const DataApiSwitcher = ({ dataToRender, selectedAPI, selectedDate }) => {
+const DataApiSwitcher = ({
+  dataToRender,
+  selectedAPI,
+  selectedDate,
+  setSelectedDate,
+}) => {
   const [dataLoaded, setDataLoaded] = useState(true);
 
   useEffect(() => {
@@ -22,26 +27,21 @@ const DataApiSwitcher = ({ dataToRender, selectedAPI, selectedDate }) => {
       {dataLoaded ? (
         <Loading />
       ) : selectedAPI === "Astronomy Picture Of The Day" ? (
-        <ApodRender formatedDate={formatedDate} apodData={dataToRender} />
+        <ApodRender
+          formatedDate={formatedDate}
+          apodData={dataToRender}
+          selectedDate={selectedDate}
+          setSelectedDate={setSelectedDate}
+        />
       ) : selectedAPI === "Mars Rover Photos" ? (
-        <MrpRender formatedDate={formatedDate} mrpData={dataToRender} />
+        <MrpRender
+          formatedDate={formatedDate}
+          mrpData={dataToRender}
+          selectedDate={selectedDate}
+          setSelectedDate={setSelectedDate}
+        />
       ) : null}
     </>
   );
 };
-
-// {dataLoaded ? (
-//   <Loading />
-// ) : selectedAPI === "Astronomy Picture Of The Day" ? (
-//   <ApodRender apodData={dataToRender} />
-// ) : selectedAPI === "Mars Rover Photos" &&
-//   dataToRender.photos &&
-//   dataToRender.photos.length > 0 ? (
-//   <>
-//     <MrpRender mrpData={dataToRender} />
-//   </>
-// ) : (
-//   <Error />
-// )}
-
 export default DataApiSwitcher;

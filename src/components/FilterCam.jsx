@@ -5,7 +5,7 @@ const FilterCam = ({ setSelectedCam, selectedRover }) => {
   return (
     <>
       {selectedRover === "curiosity" ? (
-        <div className="cam-selector">
+        <li className="cam-selector">
           <span>Select a camera:</span>
           <select name="camSelect" onChange={handleCam}>
             <option value="navcam">Navigation Camera (NAV)</option>
@@ -16,10 +16,10 @@ const FilterCam = ({ setSelectedCam, selectedRover }) => {
               Chemistry and Camera Complex (CHEMCAM)
             </option>
           </select>
-        </div>
+        </li>
       ) : null}
       {selectedRover === "Perseverance" ? (
-        <div className="cam-selector">
+        <li className="cam-selector">
           <span>Select a camera:</span>
           <select name="camSelect" onChange={handleCam}>
             <option value="navcam_left">Navigation Camera (LEFT)</option>
@@ -28,7 +28,7 @@ const FilterCam = ({ setSelectedCam, selectedRover }) => {
             <option value="mcz_left">Mast Camera Zoom (LEFT)</option>
             <option value="skycam">MEDA Skycam</option>
           </select>
-        </div>
+        </li>
       ) : null}
     </>
   );

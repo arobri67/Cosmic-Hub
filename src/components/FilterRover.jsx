@@ -11,13 +11,13 @@ const FilterRover = ({ setSelectedRover, setSelectedCam, selectedRover }) => {
 
   return (
     <>
-      <div className="rover-selector">
+      <li className="rover-selector">
         <span>Select a rover:</span>
         <select name="camSelect" onChange={handleRover}>
           <option value="curiosity">Curiosity Rover</option>
           <option value="Perseverance">Perseverance Rover</option>
         </select>
-      </div>
+      </li>
       <FilterCam
         setSelectedCam={setSelectedCam}
         selectedRover={selectedRover}

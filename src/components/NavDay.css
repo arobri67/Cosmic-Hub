@@ -1,0 +1,25 @@
+#minus-one {
+  width: 2em;
+  height: 2em;
+  border: 3px solid var(--third-color);
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 50%;
+  left: 2.5%;
+  cursor: pointer;
+}
+
+#plus-one {
+  width: 2em;
+  height: 2em;
+  border: 3px solid var(--third-color);
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(315deg);
+  position: absolute;
+  top: 50%;
+  right: 2.5%;
+  cursor: pointer;
+}

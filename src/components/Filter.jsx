@@ -1,8 +1,10 @@
 import FilterDate from "./FilterDate";
 import FilterAPI from "./FilterAPI";
 import FilterRover from "./FilterRover";
-import Error from "./Error";
 import FetchdataFromApi from "./FetchdataFromApi";
+import CurrentFilter from "./CurrentFilter";
+import Error from "./Error";
+import "./Filter.css";
 
 const Filter = ({
   selectedDate,
@@ -17,9 +19,8 @@ const Filter = ({
 }) => {
   return (
     <>
-      {" "}
       <section className="selector-filter-container">
-        <div className="selector-container">
+        <ul className="selector-container">
           <FilterDate setSelectedDate={setSelectedDate} todayDate={todayDate} />
           <FilterAPI
             setSelectedAPI={setSelectedAPI}
@@ -33,15 +34,14 @@ const Filter = ({
               selectedRover={selectedRover}
             />
           ) : null}
-        </div>
+        </ul>
         <div className="current-filter">
-          Current filters:
-          <ul>
-            <li>📆 {selectedDate}</li>
-            <li>🪐 {selectedAPI || "none"}</li>
-            <li>🤖 {selectedRover.toUpperCase() || "none"}</li>
-            <li>📷 {selectedCam.toUpperCase() || "none"}</li>
-          </ul>
+          <CurrentFilter
+            selectedAPI={selectedAPI}
+            selectedDate={selectedDate}
+            selectedCam={selectedCam}
+            selectedRover={selectedRover}
+          />
         </div>
       </section>
       {selectedDate > todayDate ? (
@@ -52,6 +52,7 @@ const Filter = ({
           selectedAPI={selectedAPI}
           selectedCam={selectedCam}
           selectedRover={selectedRover}
+          setSelectedDate={setSelectedDate}
         />
       )}
     </>

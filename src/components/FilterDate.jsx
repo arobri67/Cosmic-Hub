@@ -4,10 +4,10 @@ const FilterDate = ({ setSelectedDate, todayDate }) => {
   };
 
   return (
-    <div className="date-selector">
+    <li className="date-selector">
       <span>Select a date:</span>
       <input type="date" max={todayDate} onChange={handleDate} />
-    </div>
+    </li>
   );
 };
 export default FilterDate;

@@ -1,0 +1,11 @@
+.current-filter {
+  padding-top: 1em;
+  font-size: 1.8rem;
+}
+.current-filter ul {
+  display: flex;
+  list-style: none;
+  font-size: 1.6rem;
+  gap: 2em;
+  padding-top: 0.2em;
+}

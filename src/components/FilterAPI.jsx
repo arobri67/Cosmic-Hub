@@ -13,7 +13,7 @@ const FilterAPI = ({ setSelectedAPI, setSelectedCam, setSelectedRover }) => {
 
   return (
     <>
-      <div className="api-selector">
+      <li className="api-selector">
         <span>Select a library:</span>
         <select name="apiSelect" onChange={handleApi}>
           <option value="Astronomy Picture Of The Day">
@@ -21,7 +21,7 @@ const FilterAPI = ({ setSelectedAPI, setSelectedCam, setSelectedRover }) => {
           </option>
           <option value="Mars Rover Photos">Mars Rover Photos</option>
         </select>
-      </div>
+      </li>
     </>
   );
 };

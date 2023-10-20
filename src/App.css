@@ -3,63 +3,6 @@
   margin: 0 auto;
 }
 
-.selector-filter-container {
-  display: flex;
-  flex-direction: column;
-  padding: 3em 0;
-  border-bottom: 1px solid var(--secondary-color);
-}
-.selector-container {
-  display: flex;
-  gap: 6em;
-}
-.current-filter {
-  padding-top: 1em;
-  font-size: 1.8rem;
-}
-.current-filter ul {
-  display: flex;
-  list-style: none;
-  font-size: 1.6rem;
-  gap: 2em;
-  padding-top: 0.2em;
-}
-
-.selector-container span {
-  font-size: 1.8em;
-  padding-right: 0.5em;
-}
-.date-selector {
-  display: flex;
-  flex-direction: column;
-}
-input[type="date"] {
-  background-color: var(--secondary-color);
-  height: 30px;
-  font-size: 1.5em;
-  font-family: "Poppins";
-  padding: 0.5em;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-.api-selector,
-.cam-selector,
-.rover-selector {
-  display: flex;
-  flex-direction: column;
-}
-.api-selector select,
-.cam-selector select,
-.rover-selector select {
-  background-color: var(--secondary-color);
-  height: 30px;
-  font-size: 1.5em;
-  font-family: "Poppins";
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
 .about {
   display: flex;
   justify-content: space-between;

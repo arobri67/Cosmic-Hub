@@ -9,22 +9,26 @@
 
 .error-msg-container {
   flex: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
 }
 
 .error-img-container img {
   width: 100%;
 }
-.error-container h2 {
+.error-container li h2 {
   font-size: 3em;
   padding-bottom: 1em;
 }
-.error-container p {
+.error-container li p {
   font-size: 2em;
   padding-top: 1em;
 }
-.error-container p span {
+.error-container li p span {
   color: var(--third-color);
 }
-.error-container h2 span {
+.error-container li h2 span {
   color: var(--third-color);
 }

@@ -10,6 +10,7 @@ const FetchdataFromApi = ({
   selectedAPI,
   selectedCam,
   selectedRover,
+  setSelectedDate,
 }) => {
   const [data, setData] = useState([]);
 
@@ -36,6 +37,7 @@ const FetchdataFromApi = ({
         dataToRender={data}
         selectedAPI={selectedAPI}
         selectedDate={selectedDate}
+        setSelectedDate={setSelectedDate}
       />
     </>
   );

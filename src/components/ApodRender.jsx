@@ -1,18 +1,31 @@
 import "./ApodRender.css";
+import NavDay from "./NavDay";
 
-const ApodRender = ({ apodData, formatedDate }) => {
+const ApodRender = ({
+  apodData,
+  formatedDate,
+  setSelectedDate,
+  selectedDate,
+}) => {
   return (
     <section className="apod-container">
       <div className="img-apod-container">
         <img src={apodData.url} alt={apodData.title} />
+        <NavDay selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
       </div>
-      <div className="description-apod-container">
-        <h3>{apodData.title}</h3>
-        <p>{apodData.explanation || "Not description available"}</p>
-        <p className="credits">
-          Photo from {formatedDate}, by {apodData.copyright || "unknown"}
-        </p>
-      </div>
+      <ul className="description-apod-container">
+        <li>
+          <h3>{apodData.title}</h3>
+        </li>
+        <li>
+          <p>{apodData.explanation || "Not description available"}</p>
+        </li>
+        <li>
+          <p className="credits">
+            Photo from {formatedDate}, by {apodData.copyright || "unknown"}
+          </p>
+        </li>
+      </ul>
     </section>
   );
 };
