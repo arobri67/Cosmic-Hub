@@ -35,9 +35,15 @@ const App = () => {
       </main>
       <footer>
         <ul className="about">
-          <li>COSMIC HUB 1.0</li>
+          <li>
+            COSMIC <span>HUB</span>
+          </li>
           <li>Made by Arnaud</li>
-          <li>View it on GitHub</li>
+          <li>
+            <a href="https://github.com/arobri67/rtc-mern1">
+              View it on GitHub
+            </a>
+          </li>
         </ul>
       </footer>
     </>

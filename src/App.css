@@ -10,3 +10,35 @@
   padding: 2em 0;
   font-size: 1.6rem;
 }
+footer ul li span {
+  color: var(--third-color);
+}
+footer ul li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+footer ul li a:hover {
+  color: var(--third-color);
+}
+
+@media (max-width: 1280px) {
+  #root {
+    max-width: none;
+  }
+  .apod-container,
+  .mrp-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1280px) {
+  header {
+    flex-direction: column;
+  }
+  #root > main > section.selector-filter-container > ul {
+    flex-direction: column;
+    gap: 2em;
+  }
+  #root > main > section.selector-filter-container > div {
+    display: none;
+  }
+}
