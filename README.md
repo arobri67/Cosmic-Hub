@@ -23,10 +23,12 @@ This is a project that was made during the RockTheCode bootcamp (2023)
 .Data Function: A data function retrieves mission details based on the selected rover's name.
 .Getting Started:
 
-## Contributing:
+## Contributing:
+
 Contributions are welcome! Feel free to submit issues, feature requests, or pull requests to help improve Cosmic Hub.
 
-## License:
+## License:
+
 This project is open source and available under the MIT License.
 
 ## Author:
