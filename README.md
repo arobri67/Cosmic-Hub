@@ -1,10 +1,6 @@
-# RTC - Project MERN1.
+# RTC - Project MERN1 - Cosmic Hub.
 
-A web application using Vite and React that interacts with one of NASA's official APIs. This application will allow users to view the astronomy picture of the day.
-
-## Cosmic Hub
-
-## RockTheCode - Project MERN1.
+This is a project that was made during the RockTheCode bootcamp (2023)
 
 ## Overview:
 
