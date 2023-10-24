@@ -1,12 +1,15 @@
 const FilterCam = ({ setSelectedCam, selectedRover }) => {
+  // Function to handle camera selection and update state
   const handleCam = (e) => {
     setSelectedCam(e.target.value);
   };
   return (
     <>
+      {/* Conditional rendering based on the selected rover */}
       {selectedRover === "curiosity" ? (
         <li className="cam-selector">
           <span>Select a camera:</span>
+          {/* Dropdown menu to choose between camera options for the Curiosity rover */}
           <select name="camSelect" onChange={handleCam}>
             <option value="navcam">Navigation Camera (NAV)</option>
             <option value="mast">Mast Camera (MAST)</option>
@@ -21,6 +24,7 @@ const FilterCam = ({ setSelectedCam, selectedRover }) => {
       {selectedRover === "Perseverance" ? (
         <li className="cam-selector">
           <span>Select a camera:</span>
+          {/* Dropdown menu to choose between camera options for the Perseverance rover */}
           <select name="camSelect" onChange={handleCam}>
             <option value="navcam_left">Navigation Camera (LEFT)</option>
             <option value="navcam_right">Navigation Camera (RIGHT)</option>

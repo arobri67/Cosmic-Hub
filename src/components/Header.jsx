@@ -4,8 +4,9 @@ import mrpBackground from "../assets/mrp.png";
 import apodBackground from "../assets/apod.png";
 
 const Header = ({ api }) => {
-  // update apiAcronym only when api is changing
+  // State variable to store the acronym for the selected API
   const [apiAcronym, setApiAcronym] = useState("apod");
+  // Use the useEffect hook to update the 'apiAcronym' when the 'api' prop changes
   useEffect(() => {
     if (api === "Astronomy Picture Of The Day") {
       setApiAcronym("APOD");
@@ -13,7 +14,7 @@ const Header = ({ api }) => {
       setApiAcronym("MRP");
     }
   }, [api]);
-
+  // Function to determine the background image based on the selected API
   const getBackgroundImage = (api) => {
     if (api === "Astronomy Picture Of The Day") {
       return `url(${apodBackground})`;
@@ -21,6 +22,7 @@ const Header = ({ api }) => {
       return `url(${mrpBackground})`;
     }
   };
+  // Define the styles for the circular element with background image
   const circleStyle = {
     backgroundImage: getBackgroundImage(api),
     backgroundSize: "cover",
