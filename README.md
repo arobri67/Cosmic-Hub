@@ -31,5 +31,4 @@ This project is open source and available under the MIT License.
 
 ## Author:
 
-Author Name: Arnaud Obri
-GitHub Profile: [See GitHub Profile](https://github.com/arobri67)
+Author Name: Arnaud Obri | GitHub Profile: [See GitHub Profile](https://github.com/arobri67)
