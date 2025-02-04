@@ -1,6 +1,6 @@
 # RTC - Project MERN1 - Cosmic Hub.
 
-This is a project that was made during the RockTheCode bootcamp (2023)
+This is a project that was made during the RockTheCode bootcamp (2023). This is my very first React app after learning useState and useEffect.
 
 ## Overview:
 
