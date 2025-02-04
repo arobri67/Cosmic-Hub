@@ -41,7 +41,7 @@ const App = () => {
           </li>
           <li>Made by Arnaud</li>
           <li>
-            <a href="https://github.com/arobri67/rtc-mern1">
+            <a href="https://github.com/arobri67/Cosmic-Hub">
               View it on GitHub
             </a>
           </li>
